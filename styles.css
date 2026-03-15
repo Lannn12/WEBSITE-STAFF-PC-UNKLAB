@@ -1378,12 +1378,31 @@ body.dark-theme .text-gradient-animate {
         width: 100%;
         background-color: var(--color-white);
         flex-direction: column;
-        padding: 2rem 0;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        padding: 2.5rem 0;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        gap: 1.5rem;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
     }
     
     .nav-links.active {
         display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 0.5rem 0;
     }
     
     .mobile-menu-btn {
@@ -1404,5 +1423,42 @@ body.dark-theme .text-gradient-animate {
     
     .team-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .footer-logo {
+        position: static;
+        margin-bottom: 1.5rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vm-card {
+        padding: 1.5rem;
+    }
+    
+    .footer-bottom-bottom {
+        padding-top: 1rem;
     }
 }
