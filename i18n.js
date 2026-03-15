@@ -69,7 +69,7 @@ const translations = {
         "team.dept.tl.6.name": "Marco Pondaag", "team.dept.tl.6.role": "Drummer",
 
         "team.dept.hl.title": "Health",
-        "team.dept.hl.1.name": "Dr. Rachel Kim", "team.dept.hl.1.role": "Coordinator",
+        "team.dept.hl.1.name": "Jennifer Mariana Baulu", "team.dept.hl.1.role": "Coordinator",
         "team.dept.hl.2.name": "Nurse John Doe", "team.dept.hl.2.role": "First Aid response",
         "team.dept.hl.3.name": "Maya Angelius", "team.dept.hl.3.role": "Nutritionist",
         "team.dept.hl.4.name": "Reza Aditya", "team.dept.hl.4.role": "Medic Staff",
@@ -154,7 +154,7 @@ const translations = {
         "team.dept.tl.6.name": "Marco Pondaag", "team.dept.tl.6.role": "Drummer",
 
         "team.dept.hl.title": "Kesehatan",
-        "team.dept.hl.1.name": "Dr. Rachel Kim", "team.dept.hl.1.role": "Koordinator",
+        "team.dept.hl.1.name": "Jennifer Mariana Baulu", "team.dept.hl.1.role": "Koordinator",
         "team.dept.hl.2.name": "Nurse John Doe", "team.dept.hl.2.role": "Respon P3K",
         "team.dept.hl.3.name": "Maya Angelius", "team.dept.hl.3.role": "Ahli Gizi",
         "team.dept.hl.4.name": "Reza Aditya", "team.dept.hl.4.role": "Staf Medis",
