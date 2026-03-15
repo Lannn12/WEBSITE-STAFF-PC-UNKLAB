@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemuda Advent UNKLAB - Serving God, Serving Others</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader (Typographic Splash) -->
+    <div id="preloader" class="preloader">
+        <div class="loader-content">
+            <div class="chant-word-wrapper">
+                <span class="chant-word" id="chant-1">Staff PA PC 2026</span>
+            </div>
+            <div class="chant-word-wrapper">
+                <span class="chant-word chant-highlight" id="chant-2">Christ at The Center,</span>
+            </div>
+            <div class="chant-word-wrapper">
+                <span class="chant-word chant-highlight" id="chant-3">Excellent In Action</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="assets/logoPA.webp" alt="PA UNKLAB Logo" class="logo-img" id="nav-logo-img">
+                <span class="logo-text">Pemuda Advent</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#team" data-i18n="nav.team">Team</a></li>
+                <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="lang-toggle" aria-label="Toggle Language">
+                    <span class="lang-text">ID</span>
+                </button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-up-element">
+            <div class="hero-badge text-gradient-animate" data-i18n="hero.badge">UNKLAB </div>
+            <h1 class="hero-title staggered-reveal" data-i18n="hero.title">Reach Up — Reach In — Reach Out</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Serving God, Serving Others</p>
+            <div class="hero-cta">
+                <a href="#about" class="btn-primary magnetic-btn"><span data-i18n="hero.cta1">Our Journey</span> <i class="fas fa-arrow-right btn-icon"></i></a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Daily Verse Section -->
+    <section class="daily-verse">
+        <div class="container fade-up-element">
+            <div class="verse-container">
+                <i class="fas fa-quote-left verse-icon"></i>
+                <blockquote id="daily-verse-text" class="verse-text">Loading inspiration...</blockquote>
+                <p id="daily-verse-ref" class="verse-reference">-</p>
+                <i class="fas fa-quote-right verse-icon-right"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text fade-up-element">
+                    <h2 class="section-title text-gradient-animate" data-i18n="about.title">A Community of Grace</h2>
+                    <h3 class="section-subtitle" data-i18n="about.subtitle">Discover Our Purpose</h3>
+                    <p data-i18n="about.p1">Welcome to Pemuda Advent (PA) at Universitas Klabat. We are a youth ministry dedicated to fostering spiritual growth, cultivating meaningful relationships, and extending God's love to our campus and beyond.</p>
+                    <p data-i18n="about.p2">Our mission is to nurture a generation of young people who are deeply rooted in faith, committed to service, and united in Christ. Whether through worship, fellowship, or community outreach, we seek to embody the light of hope in everything we do.</p>
+                    <div class="vision-mission-cards">
+                        <div class="vm-card">
+                            <i class="fas fa-eye vm-icon"></i>
+                            <h4 data-i18n="about.vision.title">Vision</h4>
+                            <p data-i18n="about.vision.desc">To be a radiant community of youth, reflecting Christ's love and preparing for His soon return.</p>
+                        </div>
+                        <div class="vm-card">
+                            <i class="fas fa-hands-helping vm-icon"></i>
+                            <h4 data-i18n="about.mission.title">Mission</h4>
+                            <p data-i18n="about.mission.desc">To reach up to God, reach in to our fellow youth, and reach out to the world through active service.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image-wrapper reveal-wrapper fade-up-element delay-200">
+                    <div class="about-image-inner">
+                        <div class="reveal-curtain"></div>
+                        <img src="assets/about-placeholder.jpg" alt="Youth Ministry Gathering" class="about-img reveal-img" id="about-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team section bg-light">
+        <div class="container">
+            <div class="section-header fade-up-element">
+                <h2 class="section-title text-center" data-i18n="team.title">Our Team</h2>
+                <p class="section-description text-center" data-i18n="team.desc">Meet the dedicated officers and staff who lead our ministry with passion and faith.</p>
+            </div>
+
+            <!-- Officers -->
+            <h3 class="department-title fade-up-element"><span data-i18n="team.core">Core Leadership</span></h3>
+            <div class="team-grid officers-grid fade-up-element delay-100">
+                <div class="team-card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/profile-president.jpg" alt="President" class="profile-img">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="member-name" data-i18n="team.core.p.name">Kevin Salainti</h4>
+                        <p class="member-role" data-i18n="team.core.p.role">President</p>
+                        <p class="member-motto" data-i18n="team.core.p.motto">"Lead with love, serve with grace."</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/profile-vp.jpg" alt="Vice President" class="profile-img">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="member-name" data-i18n="team.core.vp.name">Michelle Wangkar</h4>
+                        <p class="member-role" data-i18n="team.core.vp.role">Vice President</p>
+                        <p class="member-motto" data-i18n="team.core.vp.motto">"Faith in action."</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/profile-sec.jpg" alt="Secretary" class="profile-img">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="member-name" data-i18n="team.core.sec.name">James Carter</h4>
+                        <p class="member-role" data-i18n="team.core.sec.role">Secretary</p>
+                        <p class="member-motto" data-i18n="team.core.sec.motto">"Organized for His glory."</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/profile-tres.jpg" alt="Treasurer" class="profile-img">
+                    </div>
+                    <div class="card-info">
+                        <h4 class="member-name" data-i18n="team.core.tres.name">Amanda Chen</h4>
+                        <p class="member-role" data-i18n="team.core.tres.role">Treasurer</p>
+                        <p class="member-motto" data-i18n="team.core.tres.motto">"Faithful stewardship."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Departments -->
+            <div class="departments-container fade-up-element">
+                <div class="department">
+                    <h3 class="department-title"><span data-i18n="team.dept.sm.title">Social Media</span></h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-sm-1.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.sm.1.name">Daniel Putra</h4>
+                                <p class="member-role" data-i18n="team.dept.sm.1.role">Coordinator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="department">
+                    <h3 class="department-title"><span data-i18n="team.dept.cr.title">Creative</span></h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-cr-1.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.cr.1.name">Sarah Lee</h4>
+                                <p class="member-role" data-i18n="team.dept.cr.1.role">Coordinator</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-cr-2.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.cr.2.name">Budi Santoso</h4>
+                                <p class="member-role" data-i18n="team.dept.cr.2.role">Graphic Designer</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-cr-3.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.cr.3.name">Jessica Wong</h4>
+                                <p class="member-role" data-i18n="team.dept.cr.3.role">Content Creator</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-cr-4.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.cr.4.name">Rendi Gunawan</h4>
+                                <p class="member-role" data-i18n="team.dept.cr.4.role">Copywriter</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-cr-5.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.cr.5.name">Cindy Laucer</h4>
+                                <p class="member-role" data-i18n="team.dept.cr.5.role">UI/UX Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="department">
+                    <h3 class="department-title"><span data-i18n="team.dept.mm.title">Multimedia</span></h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-mm-1.jpg" alt="Multimedia Coordinator" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.mm.1.name">Michael Chang</h4>
+                                <p class="member-role" data-i18n="team.dept.mm.1.role">Coordinator</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-mm-2.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.mm.2.name">Kevin Sanjaya</h4>
+                                <p class="member-role" data-i18n="team.dept.mm.2.role">Videographer</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-mm-3.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.mm.3.name">Grace Natalia</h4>
+                                <p class="member-role" data-i18n="team.dept.mm.3.role">Photographer</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-mm-4.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.mm.4.name">Joshua Ray</h4>
+                                <p class="member-role" data-i18n="team.dept.mm.4.role">Live Stream Op.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="department">
+                    <h3 class="department-title"><span data-i18n="team.dept.fl.title">Floor</span></h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-fl-1.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.fl.1.name">David Tan</h4>
+                                <p class="member-role" data-i18n="team.dept.fl.1.role">Coordinator</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-fl-2.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.fl.2.name">Andre wijaya</h4>
+                                <p class="member-role" data-i18n="team.dept.fl.2.role">Usher</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-fl-3.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.fl.3.name">Siska Lorenza</h4>
+                                <p class="member-role" data-i18n="team.dept.fl.3.role">Decoration</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-fl-4.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.fl.4.name">Lukas Pratama</h4>
+                                <p class="member-role" data-i18n="team.dept.fl.4.role">Logistics</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-fl-5.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.fl.5.name">Nadia Silva</h4>
+                                <p class="member-role" data-i18n="team.dept.fl.5.role">Usher</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-fl-6.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.fl.6.name">Timothy Rian</h4>
+                                <p class="member-role" data-i18n="team.dept.fl.6.role">Equipment</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-fl-7.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.fl.7.name">Fiona Lie</h4>
+                                <p class="member-role" data-i18n="team.dept.fl.7.role">Logistics</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-fl-8.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.fl.8.name">Samuel Kaleb</h4>
+                                <p class="member-role" data-i18n="team.dept.fl.8.role">Equipment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="department">
+                    <h3 class="department-title"><span data-i18n="team.dept.tl.title">Talent</span></h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-tl-1.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.tl.1.name">Elena Gomez</h4>
+                                <p class="member-role" data-i18n="team.dept.tl.1.role">Coordinator</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-tl-2.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.tl.2.name">Stevanus Theo</h4>
+                                <p class="member-role" data-i18n="team.dept.tl.2.role">Vocalist</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-tl-3.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.tl.3.name">Clara Mamesah</h4>
+                                <p class="member-role" data-i18n="team.dept.tl.3.role">Pianist</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-tl-4.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.tl.4.name">Reza Pahlevi</h4>
+                                <p class="member-role" data-i18n="team.dept.tl.4.role">Guitarist</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-tl-5.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.tl.5.name">Gaby Supit</h4>
+                                <p class="member-role" data-i18n="team.dept.tl.5.role">Choir Director</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-tl-6.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.tl.6.name">Marco Pondaag</h4>
+                                <p class="member-role" data-i18n="team.dept.tl.6.role">Drummer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="department">
+                    <h3 class="department-title"><span data-i18n="team.dept.hl.title">Health</span></h3>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-hl-1.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.hl.1.name">Dr. Rachel Kim</h4>
+                                <p class="member-role" data-i18n="team.dept.hl.1.role">Coordinator</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-hl-2.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.hl.2.name">Nurse John Doe</h4>
+                                <p class="member-role" data-i18n="team.dept.hl.2.role">First Aid response</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-hl-3.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.hl.3.name">Maya Angelius</h4>
+                                <p class="member-role" data-i18n="team.dept.hl.3.role">Nutritionist</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="card-img-wrapper">
+                                <img src="assets/profile-hl-4.jpg" alt="Member" class="profile-img">
+                            </div>
+                            <div class="card-info">
+                                <h4 class="member-name" data-i18n="team.dept.hl.4.name">Reza Aditya</h4>
+                                <p class="member-role" data-i18n="team.dept.hl.4.role">Medic Staff</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+        <div class="container">
+            <div class="section-header fade-up-element">
+                <h2 class="section-title text-center" data-i18n="gallery.title">Ministry Gallery</h2>
+                <p class="section-description text-center" data-i18n="gallery.desc">Glimpses of grace, unity, and shared moments.</p>
+            </div>
+
+            <div class="gallery-filters fade-up-element">
+                <button class="filter-btn active" data-filter="all" data-i18n="gallery.filter.all">All</button>
+                <button class="filter-btn" data-filter="worship" data-i18n="gallery.filter.worship">Worship</button>
+                <button class="filter-btn" data-filter="service" data-i18n="gallery.filter.service">Service</button>
+                <button class="filter-btn" data-filter="fellowship" data-i18n="gallery.filter.fellowship">Fellowship</button>
+            </div>
+
+            <div class="gallery-grid fade-up-element delay-100">
+                <div class="gallery-item ken-burns" data-category="worship" data-src="assets/gallery-1.jpg">
+                    <img src="assets/gallery-1.jpg" alt="Youth Sabbath Gathering" class="gallery-img kb-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5>Youth Sabbath</h5>
+                            <p>Worship &bull; Jan 2026</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item ken-burns" data-category="service" data-src="assets/gallery-2.jpg">
+                    <img src="assets/gallery-2.jpg" alt="Community Outreach" class="gallery-img kb-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5>Community Outreach</h5>
+                            <p>Service &bull; Feb 2026</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item ken-burns" data-category="worship" data-src="assets/gallery-3.jpg">
+                    <img src="assets/gallery-3.jpg" alt="Music Ministry" class="gallery-img kb-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5>Music Ministry</h5>
+                            <p>Worship &bull; Mar 2026</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                 <div class="gallery-item ken-burns" data-category="fellowship" data-src="assets/gallery-4.jpg">
+                    <img src="assets/gallery-4.jpg" alt="Fellowship Camp" class="gallery-img kb-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5>Fellowship Camp</h5>
+                            <p>Fellowship &bull; Dec 2025</p>
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container fade-up-element">
+            <div class="footer-map-container">
+                <h3 class="footer-map-title" data-i18n="footer.location">Our Location</h3>
+                <div class="map-responsive">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.406323145455!2d124.981882!3d1.4124039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32870aa0f135b139%3A0xe96c4dfb98cb6b86!2sUniversitas%20Klabat!5e0!3m2!1sen!2sid!4v1709600000000!5m2!1sen!2sid" 
+                        width="100%" 
+                        height="250" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-top">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/adventistyouthunklab?igsh=dWxjbzlnNG5qeW5t" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-bottom-bottom">
+                    <p class="copyright">&copy; 2026 Pemuda Advent Universitas Klabat. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

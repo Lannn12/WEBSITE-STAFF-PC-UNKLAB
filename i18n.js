@@ -1,0 +1,162 @@
+const translations = {
+    en: {
+        "nav.home": "Home",
+        "nav.about": "About",
+        "nav.team": "Team",
+        "nav.gallery": "Gallery",
+        "hero.badge": "UNKLAB Youth Ministry",
+        "hero.title": "Reach Up — Reach In — Reach Out",
+        "hero.subtitle": "Serving God, Serving Others",
+        "hero.cta1": "Our Journey",
+        "verse.loading": "Loading inspiration...",
+        "about.title": "A Community of Grace",
+        "about.subtitle": "Discover Our Purpose",
+        "about.p1": "Welcome to Pemuda Advent (PA) at Universitas Klabat. We are a youth ministry dedicated to fostering spiritual growth, cultivating meaningful relationships, and extending God's love to our campus and beyond.",
+        "about.p2": "Our mission is to nurture a generation of young people who are deeply rooted in faith, committed to service, and united in Christ. Whether through worship, fellowship, or community outreach, we seek to embody the light of hope in everything we do.",
+        "about.vision.title": "Vision",
+        "about.vision.desc": "To be a radiant community of youth, reflecting Christ's love and preparing for His soon return.",
+        "about.mission.title": "Mission",
+        "about.mission.desc": "To reach up to God, reach in to our fellow youth, and reach out to the world through active service.",
+        
+        // Team Section
+        "team.title": "Our Team",
+        "team.desc": "Meet the dedicated officers and staff who lead our ministry with passion and faith.",
+        "team.core": "Core Leadership",
+        
+        "team.core.p.name": "Kevin Salainti", "team.core.p.role": "President", "team.core.p.motto": "\"Lead with love, serve with grace.\"",
+        "team.core.vp.name": "Michelle Wangkar", "team.core.vp.role": "Vice President", "team.core.vp.motto": "\"Faith in action.\"",
+        "team.core.sec.name": "James Carter", "team.core.sec.role": "Secretary", "team.core.sec.motto": "\"Organized for His glory.\"",
+        "team.core.tres.name": "Amanda Chen", "team.core.tres.role": "Treasurer", "team.core.tres.motto": "\"Faithful stewardship.\"",
+
+        "team.dept.sm.title": "Social Media",
+        "team.dept.sm.1.name": "Daniel Putra", "team.dept.sm.1.role": "Coordinator",
+
+        "team.dept.cr.title": "Creative",
+        "team.dept.cr.1.name": "Sarah Lee", "team.dept.cr.1.role": "Coordinator",
+        "team.dept.cr.2.name": "Budi Santoso", "team.dept.cr.2.role": "Graphic Designer",
+        "team.dept.cr.3.name": "Jessica Wong", "team.dept.cr.3.role": "Content Creator",
+        "team.dept.cr.4.name": "Rendi Gunawan", "team.dept.cr.4.role": "Copywriter",
+        "team.dept.cr.5.name": "Cindy Laucer", "team.dept.cr.5.role": "UI/UX Designer",
+
+        "team.dept.mm.title": "Multimedia",
+        "team.dept.mm.1.name": "Michael Chang", "team.dept.mm.1.role": "Coordinator",
+        "team.dept.mm.2.name": "Kevin Sanjaya", "team.dept.mm.2.role": "Videographer",
+        "team.dept.mm.3.name": "Grace Natalia", "team.dept.mm.3.role": "Photographer",
+        "team.dept.mm.4.name": "Joshua Ray", "team.dept.mm.4.role": "Live Stream Op.",
+
+        "team.dept.fl.title": "Floor",
+        "team.dept.fl.1.name": "David Tan", "team.dept.fl.1.role": "Coordinator",
+        "team.dept.fl.2.name": "Andre Wijaya", "team.dept.fl.2.role": "Usher",
+        "team.dept.fl.3.name": "Siska Lorenza", "team.dept.fl.3.role": "Decoration",
+        "team.dept.fl.4.name": "Lukas Pratama", "team.dept.fl.4.role": "Logistics",
+        "team.dept.fl.5.name": "Nadia Silva", "team.dept.fl.5.role": "Usher",
+        "team.dept.fl.6.name": "Timothy Rian", "team.dept.fl.6.role": "Equipment",
+        "team.dept.fl.7.name": "Fiona Lie", "team.dept.fl.7.role": "Logistics",
+        "team.dept.fl.8.name": "Samuel Kaleb", "team.dept.fl.8.role": "Equipment",
+
+        "team.dept.tl.title": "Talent",
+        "team.dept.tl.1.name": "Elena Gomez", "team.dept.tl.1.role": "Coordinator",
+        "team.dept.tl.2.name": "Stevanus Theo", "team.dept.tl.2.role": "Vocalist",
+        "team.dept.tl.3.name": "Clara Mamesah", "team.dept.tl.3.role": "Pianist",
+        "team.dept.tl.4.name": "Reza Pahlevi", "team.dept.tl.4.role": "Guitarist",
+        "team.dept.tl.5.name": "Gaby Supit", "team.dept.tl.5.role": "Choir Director",
+        "team.dept.tl.6.name": "Marco Pondaag", "team.dept.tl.6.role": "Drummer",
+
+        "team.dept.hl.title": "Health",
+        "team.dept.hl.1.name": "Dr. Rachel Kim", "team.dept.hl.1.role": "Coordinator",
+        "team.dept.hl.2.name": "Nurse John Doe", "team.dept.hl.2.role": "First Aid response",
+        "team.dept.hl.3.name": "Maya Angelius", "team.dept.hl.3.role": "Nutritionist",
+        "team.dept.hl.4.name": "Reza Aditya", "team.dept.hl.4.role": "Medic Staff",
+
+        // Gallery and Footer
+        "gallery.title": "Ministry Gallery",
+        "gallery.desc": "Glimpses of grace, unity, and shared moments.",
+        "gallery.filter.all": "All",
+        "gallery.filter.worship": "Worship",
+        "gallery.filter.service": "Service",
+        "gallery.filter.fellowship": "Fellowship",
+        "brand.name": "Pemuda Advent",
+        "footer.location": "Our Location"
+    },
+    id: {
+        "nav.home": "Beranda",
+        "nav.about": "Tentang",
+        "nav.team": "Tim",
+        "nav.gallery": "Galeri",
+        "hero.badge": "Pelayanan Pemuda UNKLAB",
+        "hero.title": "Reach Up — Reach In — Reach Out",
+        "hero.subtitle": "Melayani Tuhan, Melayani Sesama",
+        "hero.cta1": "Perjalanan Kami",
+        "verse.loading": "Memuat inspirasi...",
+        "about.title": "Komunitas Penuh Kasih Karunia",
+        "about.subtitle": "Temukan Tujuan Kami",
+        "about.p1": "Selamat datang di Pemuda Advent (PA) Universitas Klabat. Kami adalah pelayanan pemuda yang berdedikasi untuk memupuk pertumbuhan rohani, membina hubungan yang bermakna, dan menyebarkan kasih Tuhan ke kampus kami dan sekitarnya.",
+        "about.p2": "Misi kami adalah membina generasi muda yang berakar kuat dalam iman, berkomitmen pada pelayanan, dan bersatu dalam Kristus. Baik melalui pujian penyembahan, persekutuan, maupun penjangkauan masyarakat, kami berusaha untuk mewujudkan terang pengharapan dalam segala hal yang kami lakukan.",
+        "about.vision.title": "Visi",
+        "about.vision.desc": "Menjadi komunitas pemuda yang bercahaya, memantulkan kasih Kristus dan bersiap menyambut kedatangan-Nya yang segera.",
+        "about.mission.title": "Misi",
+        "about.mission.desc": "Menjangkau ke atas kepada Tuhan, menjangkau ke dalam kepada sesama pemuda, dan menjangkau keluar kepada dunia melalui pelayanan nyata.",
+        
+        // Bagian Tim
+        "team.title": "Tim Kami",
+        "team.desc": "Temui para pengurus dan staf berdedikasi yang memimpin pelayanan ini dengan semangat dan iman.",
+        "team.core": "Pimpinan Inti",
+
+        "team.core.p.name": "Kevin Salainti", "team.core.p.role": "Ketua", "team.core.p.motto": "\"Memimpin dengan kasih, melayani dengan anugerah.\"",
+        "team.core.vp.name": "Michelle Wangkar", "team.core.vp.role": "Wakil Ketua", "team.core.vp.motto": "\"Iman dalam tindakan.\"",
+        "team.core.sec.name": "James Carter", "team.core.sec.role": "Sekretaris", "team.core.sec.motto": "\"Terorganisir untuk kemuliaan-Nya.\"",
+        "team.core.tres.name": "Amanda Chen", "team.core.tres.role": "Bendahara", "team.core.tres.motto": "\"Penatalayanan yang setia.\"",
+
+        "team.dept.sm.title": "Media Sosial",
+        "team.dept.sm.1.name": "Daniel Putra", "team.dept.sm.1.role": "Koordinator",
+
+        "team.dept.cr.title": "Kreatif",
+        "team.dept.cr.1.name": "Sarah Lee", "team.dept.cr.1.role": "Koordinator",
+        "team.dept.cr.2.name": "Budi Santoso", "team.dept.cr.2.role": "Desainer Grafis",
+        "team.dept.cr.3.name": "Jessica Wong", "team.dept.cr.3.role": "Kreator Konten",
+        "team.dept.cr.4.name": "Rendi Gunawan", "team.dept.cr.4.role": "Penulis Lirik/Teks",
+        "team.dept.cr.5.name": "Cindy Laucer", "team.dept.cr.5.role": "Desainer UI/UX",
+
+        "team.dept.mm.title": "Multimedia",
+        "team.dept.mm.1.name": "Michael Chang", "team.dept.mm.1.role": "Koordinator",
+        "team.dept.mm.2.name": "Kevin Sanjaya", "team.dept.mm.2.role": "Videografer",
+        "team.dept.mm.3.name": "Grace Natalia", "team.dept.mm.3.role": "Fotografer",
+        "team.dept.mm.4.name": "Joshua Ray", "team.dept.mm.4.role": "Operator Siaran Langsung",
+
+        "team.dept.fl.title": "Lantai (Floor)",
+        "team.dept.fl.1.name": "David Tan", "team.dept.fl.1.role": "Koordinator",
+        "team.dept.fl.2.name": "Andre Wijaya", "team.dept.fl.2.role": "Penyambut Tamu (Usher)",
+        "team.dept.fl.3.name": "Siska Lorenza", "team.dept.fl.3.role": "Dekorasi",
+        "team.dept.fl.4.name": "Lukas Pratama", "team.dept.fl.4.role": "Logistik",
+        "team.dept.fl.5.name": "Nadia Silva", "team.dept.fl.5.role": "Penyambut Tamu (Usher)",
+        "team.dept.fl.6.name": "Timothy Rian", "team.dept.fl.6.role": "Peralatan",
+        "team.dept.fl.7.name": "Fiona Lie", "team.dept.fl.7.role": "Logistik",
+        "team.dept.fl.8.name": "Samuel Kaleb", "team.dept.fl.8.role": "Peralatan",
+
+        "team.dept.tl.title": "Talenta (Talent)",
+        "team.dept.tl.1.name": "Elena Gomez", "team.dept.tl.1.role": "Koordinator",
+        "team.dept.tl.2.name": "Stevanus Theo", "team.dept.tl.2.role": "Vokalis",
+        "team.dept.tl.3.name": "Clara Mamesah", "team.dept.tl.3.role": "Pianis",
+        "team.dept.tl.4.name": "Reza Pahlevi", "team.dept.tl.4.role": "Gitaris",
+        "team.dept.tl.5.name": "Gaby Supit", "team.dept.tl.5.role": "Direktur Paduan Suara",
+        "team.dept.tl.6.name": "Marco Pondaag", "team.dept.tl.6.role": "Drummer",
+
+        "team.dept.hl.title": "Kesehatan",
+        "team.dept.hl.1.name": "Dr. Rachel Kim", "team.dept.hl.1.role": "Koordinator",
+        "team.dept.hl.2.name": "Nurse John Doe", "team.dept.hl.2.role": "Respon P3K",
+        "team.dept.hl.3.name": "Maya Angelius", "team.dept.hl.3.role": "Ahli Gizi",
+        "team.dept.hl.4.name": "Reza Aditya", "team.dept.hl.4.role": "Staf Medis",
+
+        // Galeri & Footer
+        "gallery.title": "Galeri Pelayanan",
+        "gallery.desc": "Sekilas tentang kasih karunia, persatuan, dan momen kebersamaan.",
+        "gallery.filter.all": "Semua",
+        "gallery.filter.worship": "Ibadah",
+        "gallery.filter.service": "Pelayanan",
+        "gallery.filter.fellowship": "Persekutuan",
+        "brand.name": "Pemuda Advent",
+        "footer.location": "Lokasi Kami"
+    }
+};
+
+export default translations;
