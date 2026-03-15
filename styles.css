@@ -1217,10 +1217,15 @@ body.dark-theme .footer-logo img {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.05);
-    color: #ffffff; /* Always White */
+    background-color: rgba(15, 23, 42, 0.05); /* Very light navy in light mode */
+    color: var(--color-text-main);
     font-size: 1.4rem;
     transition: var(--transition-smooth);
+}
+
+body.dark-theme .social-links a {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff; /* Contrast for dark mode */
 }
 
 .social-links a:hover {
@@ -1229,7 +1234,7 @@ body.dark-theme .footer-logo img {
 }
 
 .copyright {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--color-text-muted);
     font-size: 0.85rem;
     text-align: center;
 }
