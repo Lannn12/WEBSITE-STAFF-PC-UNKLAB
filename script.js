@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15
+        threshold: 0.05 // Lower threshold for better mobile responsiveness
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -370,35 +370,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 16. 3D Tilt Effect for Team Cards
+    // 16. 3D Tilt Effect for Team Cards (Disable on touch devices for performance)
     const tiltCards = document.querySelectorAll('.team-card');
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     
-    tiltCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+    if (!isTouchDevice) {
+        tiltCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                // Calculate rotation (max 15 degrees)
+                const rotateX = ((y - centerY) / centerY) * -15; 
+                const rotateY = ((x - centerX) / centerX) * 15;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                card.style.transition = 'none';
+            });
             
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                card.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
+            });
             
-            // Calculate rotation (max 15 degrees)
-            const rotateX = ((y - centerY) / centerY) * -15; 
-            const rotateY = ((x - centerX) / centerX) * 15;
-            
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-            card.style.transition = 'none';
+            card.addEventListener('mouseenter', () => {
+                card.style.transition = 'none';
+            });
         });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-            card.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
-        });
-        
-        card.addEventListener('mouseenter', () => {
-            card.style.transition = 'none';
-        });
-    });
+    }
 
     // 17. Internationalization (Language Toggle)
     const langToggleBtn = document.getElementById('lang-toggle');
