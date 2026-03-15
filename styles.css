@@ -811,8 +811,7 @@ body.dark-theme .daily-verse {
 .about-img {
     width: 100%;
     height: auto;
-    aspect-ratio: 4/5;
-    object-fit: cover;
+    object-fit: unset;
     transition: transform 0.8s ease;
 }
 
