@@ -435,4 +435,16 @@ document.addEventListener('DOMContentLoaded', () => {
             updateLanguage(currentLang);
         });
     }
+
+    // 18. Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        const scrollBar = document.getElementById('scroll-progress');
+        if (scrollBar) {
+            scrollBar.style.width = scrolled + "%";
+        }
+    });
+
 });
