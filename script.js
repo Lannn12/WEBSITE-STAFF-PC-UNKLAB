@@ -80,6 +80,18 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // Mobile/Fail-safe: Force all elements visible after 5s or if it's a mobile device and user scrolls
+    const forceVisible = () => {
+        document.querySelectorAll('.fade-up-element:not(.visible)').forEach(el => {
+            el.classList.add('visible');
+        });
+    };
+
+    if (window.innerWidth < 768) {
+        window.addEventListener('scroll', forceVisible, { once: true });
+    }
+    setTimeout(forceVisible, 5000); // 5s absolute fallback
+
     // 5. Lightbox for Gallery
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -162,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         words.forEach((word, index) => {
             const span = document.createElement('span');
             // Menambahkan spasi kecil non-breaking jika bukan kata terakhir untuk kerapian
-            span.textContent = word + (index < words.length - 1 ? '\\u00A0' : '');
+            span.textContent = word + (index < words.length - 1 ? '\u00A0' : '');
             // Mengatur delay setiap kata
             span.style.animationDelay = `${index * 0.1}s`;
             staggeredTitle.appendChild(span);
@@ -317,37 +329,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 14. Typographic Splash Screen (Preloader)
-    window.addEventListener('load', () => {
+    const handlePreloader = () => {
         const preloader = document.getElementById('preloader');
+        if (!preloader || preloader.classList.contains('slide-up')) return;
+        
         const chant1 = document.getElementById('chant-1');
         const chant2 = document.getElementById('chant-2');
         const chant3 = document.getElementById('chant-3');
         
-        if (preloader) {
-            // Sequence timing
-            setTimeout(() => chant1.classList.add('reveal'), 200);   // Show line 1
-            setTimeout(() => chant2.classList.add('reveal'), 1000);  // Show line 2
-            setTimeout(() => chant3.classList.add('reveal'), 1800);  // Show line 3
-            
-            // Fade out the text slightly before the screen slides up
-            setTimeout(() => {
-                chant1.classList.add('fade-out');
-                chant2.classList.add('fade-out');
-                chant3.classList.add('fade-out');
-            }, 3500);
+        // Sequence timing
+        setTimeout(() => chant1 && chant1.classList.add('reveal'), 200);
+        setTimeout(() => chant2 && chant2.classList.add('reveal'), 800);
+        setTimeout(() => chant3 && chant3.classList.add('reveal'), 1400); 
+        
+        setTimeout(() => {
+            [chant1, chant2, chant3].forEach(c => c && c.classList.add('fade-out'));
+        }, 2200);
 
-            // Slide the entire dark dramatic screen UP to reveal the bright hero section
-            setTimeout(() => {
-                preloader.classList.add('slide-up');
-                
-                // Trigger hero text animation manually AFTER splash screen is gone
-                // This ensures they don't play underneath the preloader
-                const heroElements = document.querySelectorAll('.hero-content .fade-up-element, .hero-content .staggered-reveal');
-                heroElements.forEach(el => el.classList.add('visible'));
-                
-            }, 4000); 
-        }
-    });
+        setTimeout(() => {
+            preloader.classList.add('slide-up');
+            const heroElements = document.querySelectorAll('.hero-content .fade-up-element, .hero-content .staggered-reveal');
+            heroElements.forEach(el => el.classList.add('visible'));
+        }, 2800);
+    };
+
+    window.addEventListener('load', handlePreloader);
+    setTimeout(handlePreloader, 4000); // Fail-safe: exit preloader after 4s even if images haven't loaded
+
 
     // 15. Back to Top Button
     const backToTopBtn = document.getElementById('back-to-top');
@@ -429,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize Language
-    if (langToggleBtn) {
+    if (langToggleBtn && langText) {
         updateLanguage(currentLang);
         
         langToggleBtn.addEventListener('click', () => {
@@ -437,6 +445,9 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('pa-lang', currentLang);
             updateLanguage(currentLang);
         });
+    } else if (langToggleBtn) {
+        // Fallback if langText is missing but btn exists
+        updateLanguage(currentLang);
     }
 
     // 18. Scroll Progress Bar
