@@ -1431,6 +1431,38 @@ body.dark-theme .text-gradient-animate {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 
+    /* Horizontal scroll for departments on mobile/tablet */
+    .departments-container .team-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 1.5rem;
+        gap: 1.5rem;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 1rem;
+    }
+
+    .departments-container .team-card {
+        flex: 0 0 280px;
+        scroll-snap-align: start;
+    }
+
+    /* Custom scrollbar for horizontal scroll */
+    .departments-container .team-grid::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .departments-container .team-grid::-webkit-scrollbar-track {
+        background: rgba(15, 23, 42, 0.05);
+        border-radius: 10px;
+    }
+    
+    .departments-container .team-grid::-webkit-scrollbar-thumb {
+        background: var(--color-accent-gold);
+        border-radius: 10px;
+    }
+
     .footer-logo {
         position: static;
         margin-bottom: 1.5rem;
